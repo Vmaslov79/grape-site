@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виноградник - Кобильника Олександра</title>
+    <link rel="icon" type="image/png" href="./Images/Logo-3.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--НАВІГАЦІЯ-->
+    <header class="site-header">
+        <div class="logo-block">
+            <a href="#home">
+              <img src="./Images/Logo-1.png" alt="Виноградник" class="logo">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">Про мене</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#orderForm" class="btn-order">Замовити</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Головна-->
+    <section id="home">
+        <h1>Саджанці винограду у Вінницькій області</h1>
+        <p>Якісні сорти для вашого виноградника. Доставка по Україні.</p>
+    </section>
+
+    <!--Про мене-->
+    <section id="about">
+        <h2>Про мене</h2>
+        <p>Вітаю Всіх любителів винограду та виноградної лози. Я займаюся вирощуванням винограду та продажем саджанців.
+        Гарантую якість і консультацію по догляду.</p>
+        <!--YouTube Канал-->
+        <h3>Мій YouTube канал</h3>
+        <div class="video-container">
+            <iframe width="560" 
+            height="315" src="https://www.youtube.com/embed/DwC-nwDrV9Y?si=9KqRI9uF6JiOyKTK" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+           <iframe width="560" height="315" 
+           src="https://www.youtube.com/embed/lSC8o2u5hg0?si=dcl7k4ADf6okKgFW" 
+           title="YouTube video player" 
+           frameborder="0" 
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+           referrerpolicy="strict-origin-when-cross-origin" 
+           allowfullscreen>
+            </iframe>
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/dnd56WQFyEo?si=K4_MD4WzyqOwqyZD" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/P0jV1dnEngo?si=TiHEXuEs1SaADT0S" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+        </div>
+        <!--Фото каталог-->
+        <h3>Фото каталог-2025</h3>
+        <a href="https://photos.app.goo.gl/kBkq7aQoMZ8Uw4uZ8" target="blank" class="btn-drive"></a>
+        <h3>Фото каталог-2024</h3>
+        <a href="https://photos.app.goo.gl/P8eTdusBkN6qgZj8A" target="blank" class="btn-drive"></a>
+    </section>
+
+    <!--Каталог-->
+    <section id="catalog">
+        <h2>Каталог саджанців</h2>
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/spreadsheets/d/15SnJUp5FwvWS_aTyFdUIhu-isMZ8t98Y/edit?gid=1206880969#gid=1206880969"
+                    frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <!--Контакти-->
+    <section id="contacts">
+        <h2>Контакти</h2>
+        <p>Телефон: +380 96 326 37 05</p>
+        <form id="orderForm">
+            <label>Ваше ім'я:</label><br>
+            <input type="text" name="name" required><br>
+            <label>Повідомлення:</label><br>
+            <textarea name="message" required></textarea><br>
+            <button type="submit">Надіслати</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Vlad Maslov</p>
+    </footer>
+
+    <!-- Telegram інтеграція -->
+    <script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = e.target.name.value;
+      const message = e.target.message.value;
+
+      const token = "8751110070:AAGUf6_NgxxqxjyANA8mkGSnEWDvPtdVEu0";
+      const chatId = "554218830";
+      const text = `Нова заявка:\nІм'я: ${name}\nПовідомлення: ${message}`;
+
+      fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`)
+        .then(response => {
+          if (response.ok) {
+            alert("Заявка відправлена у Telegram!");
+            e.target.reset();
+          } else {
+            alert("Помилка при відправці.");
+          }
+        })
+        .catch(() => alert("Помилка з'єднання."));
+    });
+    </script>
+</body>
+</html>
