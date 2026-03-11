@@ -107,8 +107,8 @@
       const name = e.target.name.value;
       const message = e.target.message.value;
 
-      const token = "8751110070:AAGUf6_NgxxqxjyANA8mkGSnEWDvPtdVEu0";
-      const chatId = "554218830";
+      const token = "";
+      const chatId = "";
       const text = `Нова заявка:\nІм'я: ${name}\nПовідомлення: ${message}`;
 
       fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`)
