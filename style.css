@@ -14,8 +14,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #4CAF50;
-    padding: 10px 20px;
+    background-image: url("./images/Header1.png");
+    background-size: cover;
+    background-position: center;
+    padding: 40px 50px;
     color: white;
     flex-wrap: wrap;
 }
