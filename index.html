@@ -13,22 +13,25 @@
         <div class="logo-block">
             <a href="#home">
               <img src="./images/Logo-1.png" alt="Виноградник" class="logo">
-            </a>
+           </a>
+	   
         </div>
-        <nav class="main-nav">
+	<!-- Кнопка бургер -->
+	<button class="menu-toggle" aria-lable="Меню">&#9776;</button>
+
+	<nav class="main-nav">
             <ul>
                 <li><a href="#about">Про мене</a></li>
-                <li><a href="#contacts">Контакти</a></li>
                 <li><a href="#catalog">Каталог</a></li>
+		<li><a href="#contacts">Контакти</a></li>
                 <li><a href="#orderForm" class="btn-order">Замовити</a></li>
-            </ul>
+	    </ul>
         </nav>
     </header>
 
     <!--Головна-->
     <section id="home">
         <h1>Саджанці винограду у Вінницькій області</h1>
-        <p>Якісні сорти для вашого виноградника. Доставка по Україні.</p>
     </section>
 
     <!--Про мене-->
@@ -39,13 +42,13 @@
         <!--YouTube Канал-->
         <h3>Мій YouTube канал</h3>
         <div class="video-container">
-            <iframe width="560" 
-            height="315" src="https://www.youtube.com/embed/DwC-nwDrV9Y?si=9KqRI9uF6JiOyKTK" 
+            <iframe width="300"
+            height="200" src="https://www.youtube.com/embed/DwC-nwDrV9Y?si=9KqRI9uF6JiOyKTK" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen></iframe>
-           <iframe width="560" height="315" 
+           <iframe width="300" height="200" 
            src="https://www.youtube.com/embed/lSC8o2u5hg0?si=dcl7k4ADf6okKgFW" 
            title="YouTube video player" 
            frameborder="0" 
@@ -53,13 +56,13 @@
            referrerpolicy="strict-origin-when-cross-origin" 
            allowfullscreen>
             </iframe>
-            <iframe width="560" height="315" 
+            <iframe width="300" height="200" 
             src="https://www.youtube.com/embed/dnd56WQFyEo?si=K4_MD4WzyqOwqyZD" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen></iframe>
-            <iframe width="560" height="315" 
+            <iframe width="300" height="200" 
             src="https://www.youtube.com/embed/P0jV1dnEngo?si=TiHEXuEs1SaADT0S" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -123,5 +126,6 @@
         .catch(() => alert("Помилка з'єднання."));
     });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
