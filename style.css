@@ -1,5 +1,5 @@
 body {
-    padding-top: 80px;
+    padding-top: 120px;
     font-family: Arial, sans-serif;
     margin: 0;
     line-height: 1.6;
@@ -12,26 +12,26 @@ body {
     width: 100%;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-image: url("./images/Header1.png");
-    background-size: cover;
-    background-position: center;
-    padding: 40px 50px;
+    background: rgba(0,0,0,0.5) url("../images/banner.png") center/cover no-repeat;
+    padding: 40px 20px;
     color: white;
-    flex-wrap: wrap;
 }
 
 .logo-block .logo {
-    height: 60px;
+    height: 80px;
+    margin-bottom: 20px; 
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 10px;
     margin: 0;
     padding: 0;
+    
 }
 
 .main-nav a {
@@ -52,29 +52,38 @@ body {
     color: #333;
     border-radius: 4px;
 }
+.menu-toggle {
+	display: none;
+	font-size: 28px;
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
 
 /* Адаптивність для телефонів */
 @media (max-width: 768px) {
-    .site-header {
-        flex-direction: column;
-        align-items: flex-start;
+    .menu-toggle {
+	    display: block;
+    }
+    .main-nav {
+	    display: none;
+	    width: 100%;
+    }
+    .main-nav.active {
+	    display: block;
     }
     .main-nav ul {
-        flex-direction: column;
-        width: 100%;
+	    flex-direction: column;
+	    width: 100%;
     }
     .main-nav a {
-        display: block;
-        width: 100%;
-        padding: 12px;
-        text-align: left;
-    }
-    .btn-order {
-        text-align: center;
-        margin-top: 10px;
+	    display: block;
+	    width: 100%;
+	    padding: 12px;
+	    text-align: left;
     }
 }
-
 section {
     padding: 20px;
 }
