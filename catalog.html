@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виноградник - Кобильника Олександра</title>
+    <link rel="icon" type="image/png" href="./images/Logo-3.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--НАВІГАЦІЯ-->
+    <header class="site-header">
+        <div class="logo-block">
+            <a href="#home">
+              <img src="./images/Logo-1.png" alt="Виноградник" class="logo">
+           </a>
+
+        </div>
+        <!-- Кнопка бургер -->
+        <button class="menu-toggle" aria-label="Меню">&#9776;</button>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./index.html#about">Про мене</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="./index.html#contacts">Контакти</a></li>
+                <li><a href="./index.html#orderForm" class="btn-order">Замовити</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+    <!--Контакти-->
+    <section id="contacts">
+        <h2>Контакти</h2>
+        <p>Телефон: +380 96 326 37 05</p>
+        <form id="orderForm">
+            <label>Ваше ім'я:</label><br>
+            <input type="text" name="name" required><br>
+            <label>Повідомлення:</label><br>
+            <textarea name="message" required></textarea><br>
+            <button type="submit">Надіслати</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Vlad Maslov</p>
+    </footer>
+
+    <!-- Telegram інтеграція -->
+    <script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = e.target.name.value;
+      const message = e.target.message.value;
+
+      const token = "";
+      const chatId = "";
+      const text = `Нова заявка:\nІм'я: ${name}\nПовідомлення: ${message}`;
+
+      fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`)
+        .then(response => {
+          if (response.ok) {
+            alert("Заявка відправлена у Telegram!");
+            e.target.reset();
+          } else {
+            alert("Помилка при відправці.");
+          }
+        })
+        .catch(() => alert("Помилка з'єднання."));
+    });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
