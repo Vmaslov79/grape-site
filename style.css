@@ -62,7 +62,7 @@ body {
 	gap: 30px;
 }
 .about-image img {
-	max-width: 350px;
+	max-width: 400px;
 	border-radius: 10px;
 	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -72,12 +72,13 @@ body {
 }
 .about-text h2 {
 	font-size: 2em;
+    color: rgba(106, 65, 52, 0.911);
 	margin-bottom: 10px;
 }
 .about-text h3 {
 	font-size: 1.5em;
 	margin-bottom: 15px;
-	color: #555;
+	color: rgba(109, 76,65,0.8);
 }
 .about-text p {
 	font-size: 1.1em;
@@ -87,7 +88,7 @@ body {
 }
 .vinograd-section h2 {
 	text-align: center;
-	color: rgba(109, 76, 65, 0.8);
+	color: rgba(106, 65, 52, 0.911);
 	margin-top: 4px;
 	margin-bottom: 8px;
 	font-weight: bold;
@@ -190,7 +191,7 @@ body {
 section {
     margin: 0;
     padding: 20px 12px;
-    background=color: #fffde7;
+    background-color: #fff8e1;
     border-bottom: 2px solid rgba(109, 76, 65, 0.3);
 }
 section:last-of-type {
