@@ -6,12 +6,17 @@
     <title>Виноградник - Кобильника Олександра</title>
     <link rel="icon" type="image/png" href="./images/Logo-3.png">
     <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!--Lightboc CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2/dist/css/lightbox.min.css">
+
 </head>
 <body>
     <!--НАВІГАЦІЯ-->
     <header class="site-header">
         <div class="logo-block">
-            <a href="#home">
+            <a href="./index.html#home">
               <img src="./images/Logo-1.png" alt="Виноградник" class="logo">
            </a>
 
@@ -28,7 +33,40 @@
             </ul>
         </nav>
     </header>
-        
+    <section id="catalog" class="catalog-section">
+	    <h2>Каталог винограду</h2>
+	    <div id="catalog-container" class="catalog-container"></div>
+    </section>
+	    <!-- Шаблони карт-->
+    <template id="card-template">
+	    <div class="card">
+		    <h3 class="sort"></h3>
+		    <div class="swiper">
+			    <div class="swiper-wrapper">
+				    <!--Фото вставляти тут-->
+		            <a href=""
+			    </div>
+			    <div class="swiper-button-next"></div>
+			    <div class="swiper-button-prev"></div>
+	    </div>
+		    <p><strong>Дозрівання:</strong> <span class="ripening"></span></p>
+		    <p><strong>Маса грон:</strong> <span class="bunch"></span></p>
+		    <p><strong>Маса ягід:</strong> <span class="berry"></span></p>
+		    <p><strong>Колір/Форма:</strong> <span class="color"></span></p>
+		    <p><strong>Смак:</strong> <span class="taste"></span></p>
+		    <p><strong>Ціна чубук:</strong> <span class="price-chubuk"></span> грн</p>
+		 <p><strong>Ціна саджанець:</strong> <span class="price-sadzanec"></span> грн</p>
+		    <p><strong>Відкр. кор:</strong> <span class="price-open"></span> грн</p>
+		    <p><strong>Контейнер:</strong> <span class="price-container"></span> грн</p>
+	     </div>
+	     
+    </template>
+
+    <!-- JS --->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2/dist/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+    
     <!--Контакти-->
     <section id="contacts">
         <h2>Контакти</h2>
@@ -41,7 +79,7 @@
             <button type="submit">Надіслати</button>
         </form>
     </section>
-
+		   
     <footer>
         <p>© 2026 Vlad Maslov</p>
     </footer>
